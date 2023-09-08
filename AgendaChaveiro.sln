@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaChaveiro", "AgendaChaveiro\AgendaChaveiro.csproj", "{21C10BF8-D75C-430C-9C57-8A696EFEBCFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21C10BF8-D75C-430C-9C57-8A696EFEBCFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C10BF8-D75C-430C-9C57-8A696EFEBCFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C10BF8-D75C-430C-9C57-8A696EFEBCFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C10BF8-D75C-430C-9C57-8A696EFEBCFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14FE07B8-9B8F-4BA6-B078-08114974DE29}
+	EndGlobalSection
+EndGlobal
