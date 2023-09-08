@@ -24,15 +24,72 @@ Observações:
 -------------------------------------------------------
 
 ```
-Faça um único programa (utilizando o conceito de listas) para controlar a agenda de trabalho de um dia de um chaveiro que realiza atendimento a domicílio. Considere: o sistema deve controlar apenas um dia de trabalho, de um único chaveiro, e ele realiza 12 atendimentos por dia. Armazene toda a agenda
-do chaveiro de uma só vez antes do menu do programa, armazenando os seguintes dados em listas separadas mas de igual tamanho: CEP da rua da casa que será atendida, o valor do orçamento do atendimento, e um status para cada agendamento que indica se ele foi ou não realizado (1 REALIZADO, 0 NÃO REALIZADO).
-Em seguida apresente um menu com as seguintes opções:
-1.Listar atendimentos agendados: caso o usuário selecione essa opção, o programa deverá listar em tela todos os agendamentos mostrando o CEP da casa e o valor do orçamento.
-2.Calcular a soma do dinheiro recebido pelo chaveiro: caso o usuário selecione essa opção, o programa deverá passar por todos os atendimento, acumulando o valor do orçamento somente dos
-atendimentos que o status foi REALIZADO.
-3.Encontrar o CEP do orçamento mais caro e o mais barato: caso o usuário selecione essa opção, o programa deverá passar por todos os atendimentos e encontrar qual foi o atendimento com o orçamento
-mais caro e o mais barato (independente do atendimento ter sido ou não realizado) e apresentar o CEP de cada um desses atendimentos.
-4. Sair do programa: caso o usuário selecione essa opção, o programa deverá ser encerrado!
+INÍCIO
+    Criar uma lista de inteiros chamada CEPs
+    Criar uma lista de números em ponto flutuante chamada orcamentos
+    Criar uma lista de inteiros chamada status
 
------- ```
+    PARA a de 0 até 2
+        Exibir "Digite o CEP da casa a ser atendida:"
+        Ler e converter o valor para inteiro e armazenar em CEP
+        Adicionar CEP à lista CEPs
 
+        Exibir "Digite o valor do orçamento:"
+        Ler e converter o valor para número em ponto flutuante e armazenar em orcamento
+        Adicionar orcamento à lista orcamentos
+
+        Exibir "Digite o status do atendimento (0 - Não realizado, 1 - Realizado):"
+        Ler e converter o valor para inteiro e armazenar em statusAtendimento
+        Adicionar statusAtendimento à lista status
+    FIM PARA
+
+    Criar uma variável inteira chamada opcao e inicializá-la com 0
+
+    ENQUANTO opcao diferente de 4 FAÇA
+        Exibir "Menu"
+        Exibir "1. Listar atendimentos agendados"
+        Exibir "2. Calcular a soma do dinheiro recebido pelo chaveiro"
+        Exibir "3. Encontrar o CEP do orçamento mais caro e o mais barato"
+        Exibir "4. Sair do programa"
+
+        Exibir "Digite a opção:"
+        Ler e converter o valor para inteiro e armazenar em opcao
+
+        SE opcao igual a 1 ENTÃO
+            PARA a de 0 até 2
+                Exibir "CEP:", CEPs[a], "Orçamento:", orcamentos[a]
+            FIM PARA
+        SENÃO SE opcao igual a 2 ENTÃO
+            Criar uma variável em ponto flutuante chamada total e inicializá-la com 0
+
+            PARA a de 0 até 2
+                SE status[a] igual a 1 ENTÃO
+                    total += orcamentos[a]
+                FIM SE
+            FIM PARA
+
+            Exibir "A soma do dinheiro recebido pelo chaveiro é:", total
+        SENÃO SE opcao igual a 3 ENTÃO
+            Criar uma variável em ponto flutuante chamada orcamentoMin e inicializá-la com o valor do primeiro elemento em orcamentos
+            Criar uma variável em ponto flutuante chamada orcamentoMax e inicializá-la com o valor do primeiro elemento em orcamentos
+            Criar uma variável inteira chamada cepMin e inicializá-la com o valor do primeiro elemento em CEPs
+            Criar uma variável inteira chamada cepMax e inicializá-la com o valor do primeiro elemento em CEPs
+
+            PARA a de 1 até 2
+                SE orcamentos[a] menor que orcamentoMin ENTÃO
+                    orcamentoMin = orcamentos[a]
+                    cepMin = CEPs[a]
+                FIM SE
+                SE orcamentos[a] maior que orcamentoMax ENTÃO
+                    orcamentoMax = orcamentos[a]
+                    cepMax = CEPs[a]
+                FIM SE
+            FIM PARA
+
+            Exibir "CEP do orçamento mais barato:", cepMin, "valor:", orcamentoMin
+            Exibir "CEP do orçamento mais caro:", cepMax, "valor:", orcamentoMax
+        SENÃO SE opcao igual a 4 ENTÃO
+            Exibir "Programa encerrado."
+        FIM SE
+    FIM ENQUANTO
+FIM
