@@ -16,18 +16,10 @@ Funcionalidades Principais:
    - Encontrar o CEP do orçamento mais caro e o mais barato: Encontra o CEP do atendimento com o orçamento mais caro e mais barato, independentemente do status de realização.
    - Sair do programa: Encerra o programa.
 
-Uso:
-
-1. Execute o programa e siga as instruções no console para cadastrar os atendimentos.
-2. Após o cadastro, você será apresentado ao menu de opções.
-3. Selecione a opção desejada digitando o número correspondente e siga as instruções para realizar as operações desejadas.
-
 Observações:
 
 - O programa possui um limite de 3 atendimentos para este exemplo, mas você pode ajustar o valor conforme necessário.
 - Certifique-se de inserir os valores corretamente durante a execução para evitar erros de entrada.
-
-Este código é um exemplo simples de como controlar uma agenda de trabalho usando listas em C# e pode ser usado como ponto de partida para projetos mais complexos de gerenciamento de agendas ou serviços.
 
 -------------------------------------------------------
 
