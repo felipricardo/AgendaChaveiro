@@ -1,14 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 class Program
 {
     static void Main()
     {
+        // Listas para armazenar dados relacionados a atendimentos
         List<int> CEPs = new List<int>();
         List<double> orcamentos = new List<double>();
         List<int> status = new List<int>();
 
+        // Coleta informações sobre atendimentos
         for (int a = 0; a < 3; a++)
         {
             Console.WriteLine("Digite o CEP da casa a ser atendida:");
@@ -27,6 +29,7 @@ class Program
         int opcao = 0;
         while (opcao != 4)
         {
+            // Menu de opções
             Console.WriteLine("\nMenu");
             Console.WriteLine("1. Listar atendimentos agendados");
             Console.WriteLine("2. Calcular a soma do dinheiro recebido pelo chaveiro");
@@ -38,6 +41,7 @@ class Program
 
             if (opcao == 1)
             {
+                // Listar atendimentos agendados
                 for (int a = 0; a < 3; a++)
                 {
                     Console.WriteLine($"CEP: {CEPs[a]}, Orçamento: {orcamentos[a]}");
@@ -45,6 +49,7 @@ class Program
             }
             else if (opcao == 2)
             {
+                // Calcular a soma do dinheiro recebido pelo chaveiro
                 double total = 0;
                 for (int a = 0; a < 3; a++)
                 {
@@ -57,6 +62,7 @@ class Program
             }
             else if (opcao == 3)
             {
+                // Encontrar o CEP do orçamento mais caro e o mais barato
                 double orcamentoMin = orcamentos[0];
                 double orcamentoMax = orcamentos[0];
                 int cepMin = CEPs[0];
@@ -81,6 +87,7 @@ class Program
             }
             else if (opcao == 4)
             {
+                // Sair do programa
                 Console.WriteLine("Programa encerrado.");
             }
         }
